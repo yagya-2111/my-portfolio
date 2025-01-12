@@ -295,12 +295,10 @@ nav ul li a:hover::after {
 /* Responsive Introduction Section */
 @media (max-width: 768px) {
     .introduction {
-        height: calc(100vh - 80px); /* Adjust for smaller navbar height on mobile */
+        height: calc(100vh - 200px); /* Adjust for smaller navbar height on mobile */
         padding: 1rem; /* Reduce padding for smaller screens */
         margin: 0;
-        display: flex;
-        flex-direction: column; /* Align content to the bottom */
-        padding-bottom: rem;
+       
          /* Remove margin to fit the full screen */
     }
 
