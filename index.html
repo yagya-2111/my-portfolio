@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yagya | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMVuJ8F5T1ylPms4xdEjwMZ3wT81GA2+4m4zAK" crossorigin="anonymous">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="px-6">
+        <div class="logo flex items-center">
+            <img src="logo.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <h1 class="text-2xl font-bold ml-4">Yagya Tripathi</h1>
+        </div>
+        <div class="social-links flex items-center">
+            <a href="https://www.linkedin.com/in/yagya-tripathi-255487339"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <span class="separator"></span>
+            <a href="https://github.com/yagya-2111" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <button id="nav-toggle" class="md:hidden">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container mx-auto px-6">
+        <section id="about" class="introduction my-12">
+            <h2 class="text-3xl font-bold">Hy, I'm Yagya</h2>
+            <h3 class="text-xl">Full Stack Web Developer</h3>
+            <p class="mt-4 text-lg">I’m a passionate Full-Stack Developer with expertise in creating dynamic, user-friendly web applications. I specialize in the MERN stack and love building innovative solutions using React, Next.js, Tailwind CSS, and modern web technologies.</p>
+            <p class="mt-4 text-lg">Explore my projects and let’s build something amazing together!</p>
+        </section>
+        <section id="projects" class="projects">
+            <h2 class="text-2xl font-bold mb-6">Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8" >
+                <div class="project">
+                    <div class="laptop">
+                        <img src="project1.png" alt="Laptop" class="laptop-img">
+                    </div>
+                    <h3>Project Title 1</h3>
+                    <p>Brief description of Project 1.</p>
+                </div>
+                <div class="project">
+                    <div class="laptop">
+                        <img src="project2.png" alt="Laptop" class="laptop-img">
+                    </div>
+                    <h3>Project Title 2</h3>
+                    <p>Brief description of Project 2.</p>
+                </div>
+                <div class="project">
+                    <div class="laptop">
+                        <img src="project3.png" alt="Laptop" class="laptop-img">
+                    </div>
+                    <h3>Project Title 3</h3>
+                    <p>Brief description of Project 3.</p>
+                </div>
+                <div class="project">
+                    <div class="laptop">
+                        <img src="project4.png" alt="Laptop" class="laptop-img">
+                    </div>
+                    <h3>Project Title 4</h3>
+                    <p>Brief description of Project 4.</p>
+                </div>
+                <div class="project">
+                    <div class="laptop">
+                        <img src="project5.png" alt="Laptop" class="laptop-img">
+                    </div>
+                    <h3>Project Title 5</h3>
+                    <p>Brief description of Project 5.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="skills" class="skills">
+        <h2 class="text-2xl font-bold mb-6">Skills</h2>
+        <div class="flex flex-wrap justify-center">
+            <div class="skill-icon">
+                <img src="html.png" alt="HTML">
+                <div class="tooltip">HTML</div>
+            </div>
+            <div class="skill-icon">
+                <img src="css.png" alt="CSS">
+                <div class="tooltip">CSS</div>
+            </div>
+            <div class="skill-icon">
+                <img src="js.png" alt="JavaScript">
+                <div class="tooltip">JavaScript</div>
+            </div>
+            <div class="skill-icon">
+                <img src="react.png" alt="React">
+                <div class="tooltip">React</div>
+            </div>
+            <div class="skill-icon">
+                <img src="tailwind.png" alt="Tailwind CSS">
+                <div class="tooltip">Tailwind CSS</div>
+            </div>
+            <div class="skill-icon">
+                <img src="mongodb.png" alt="MongoDB">
+                <div class="tooltip">MongoDB</div>
+            </div>
+            <div class="skill-icon">
+                <img src="sql.png" alt="SQL">
+                <div class="tooltip">SQL</div>
+            </div>
+            <div class="skill-icon">
+                <img src="nosql.png" alt="NoSQL">
+                <div class="tooltip">NoSQL</div>
+            </div>
+            <div class="skill-icon">
+                <img src="expressjs.webp" alt="Express.js">
+                <div class="tooltip">Express.js</div>
+            </div>
+            <div class="skill-icon">
+                <img src="nodejs.png" alt="Node.js">
+                <div class="tooltip">Node.js</div>
+            </div>
+            <div class="new-skills flex flex-wrap justify-center mt-6">
+                <div class="skill-tile">
+                    <h3>Responsive Design</h3>
+                </div>
+                <div class="skill-tile">
+                    <h3>UI/UX</h3>
+                </div>
+                <div class="skill-tile">
+                    <h3>Git/GitHub</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <h2 class="text-2xl font-bold mb-6">Contact</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email Address" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <section id="resume" class="resume">
+        <h2 class="text-2xl font-bold mb-6">Resume</h2>
+        <p>Link to my resume </p>
+    </section>
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <a href="https://www.linkedin.com/in/yagya-tripathi-255487339" target="_blank">
+            <img src="linkedin.png" alt="LinkedIn" class="social-icon">
+        </a>
+        <a href="https://github.com/yagya-2111" target="_blank">
+            <img src="github.png" alt="GitHub" class="social-icon">
+        </a>
+        <a href="mailto:yagyatripathi6063@gmail.com" target="_blank">
+            <img src="gmail.png" alt="Gmail" class="social-icon">
+        </a>
+        <a href="https://www.instagram.com/realyagya.pvt" target="_blank">
+            <img src="instagram.png" alt="Instagram" class="social-icon">
+        </a>
+    </footer>
+</body>
+</html>
