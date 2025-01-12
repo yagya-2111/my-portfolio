@@ -26,22 +26,13 @@ document.getElementById('contactForm').addEventListener('submit', function (e) {
         return;
     }
 
-    console.log('Sending email with EmailJS...'); // Debugging log
-
-    // Send email using EmailJS
-    emailjs.send('service_url023m', 'template_hj81epa', {
-        to_name: 'Your Name', // Replace with your desired recipient name
-        from_name: name,
-        message: message
-    }).then(response => {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Thank you for your message! We will get back to you shortly.');
-        e.target.reset();
-    }).catch(err => {
-        console.error('Failed to send message. Error details:', err); // Detailed error logging
-        alert('Failed to send message. Please try again later.');
-    });
+    // Simulate form submission
+    console.log('Form submitted:', { name, email, message });
+    alert('Thank you for your message! We will get back to you shortly.');
+    e.target.submit(); // Submit the form using FormSubmit
+    e.target.reset();
 });
+
 document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.querySelector('nav ul');
