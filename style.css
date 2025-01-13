@@ -46,7 +46,7 @@ body {
 
 .skill-tile:hover {
     background-color: #273038;
-    box-shadow: 0 0 15px rgba(72, 187, 120, 1);
+    box-shadow: 0 0 15px rgb(36, 80, 210);
     transform: translateY(-10px);
 }
 .skill-tile::after {
@@ -237,7 +237,7 @@ nav ul li a:hover::after {
 /* Hover Effect (Similar to Tiles) */
 .introduction:hover {
     transform: translateY(-10px); /* Lift effect */
-    box-shadow: 0 0 20px rgba(72, 187, 120, 1); /* Glow effect */
+    box-shadow: 0 0 20px rgba(74, 208, 37, 0.782); /* Glow effect */
 }
 
 /* Title Styling */
@@ -549,7 +549,7 @@ footer .social-icon {
 
 .ai-tool:hover {
     background-color: #273038;
-    box-shadow: 0 0 15px rgba(72, 187, 120, 1);
+    box-shadow: 0 0 15px rgb(36, 80, 210);
     transform: translateY(-10px);
 }
 
