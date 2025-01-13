@@ -237,7 +237,7 @@ nav ul li a:hover::after {
 /* Hover Effect (Similar to Tiles) */
 .introduction:hover {
     transform: translateY(-10px); /* Lift effect */
-    box-shadow: 0 0 20px rgba(74, 208, 37, 0.782); /* Glow effect */
+    box-shadow: 0 0 20px rgb(36, 80, 210); /* Glow effect */
 }
 
 /* Title Styling */
