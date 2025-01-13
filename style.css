@@ -586,6 +586,7 @@ footer .social-icon {
         margin-right: 10px; /* Add margin to the right */
     }
 }
+
 @media (min-width: 768px) {
     .md\:grid-cols-2 {
         grid-template-columns: repeat(3, minmax(0, 0.3fr)) !important;
