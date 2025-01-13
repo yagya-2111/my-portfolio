@@ -415,8 +415,8 @@ footer a:hover {
 }
 
 footer .social-icon {
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     transition: border 0.2s;
 }
