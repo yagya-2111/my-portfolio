@@ -506,5 +506,79 @@ footer .social-icon {
     }
 }
 
+.ai-tools {
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
 
+.grid {
+    display: grid;
+    gap: 1rem;
+    justify-content: center; /* Center the grid items */
+    justify-items: center; /* Center the content within the grid items */
+}
+
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.ai-tool {
+    width: 220px;
+    height: 100px;
+    background-color: #1a202c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    flex-direction: column; /* Ensure the content inside is arranged in a column */
+}
+
+.ai-tool:hover {
+    background-color: #273038;
+    box-shadow: 0 0 15px rgba(72, 187, 120, 1);
+    transform: translateY(-10px);
+}
+
+.ai-tool::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+}
+
+.ai-tool:hover::after {
+    left: 100%;
+}
+
+.iconss {
+    max-width: 50px; /* Reduce the size of the logos */
+    margin-bottom: 0.5rem;
+}
+
+.ai-tool h3 {
+    font-size: 1rem; /* Make the text smaller */
+    color: #00bfff;
+}
+
+@media (max-width: 768px) {
+    .ai-tool {
+        width: calc(100% - 60px); /* Reduce width to allow space for margins */
+        margin-left: 10px; /* Add margin to the left */
+        margin-right: 10px; /* Add margin to the right */
+    }
+}
 
