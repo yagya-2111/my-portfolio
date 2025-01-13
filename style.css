@@ -508,10 +508,15 @@ footer .social-icon {
 
 .ai-tools {
     padding: 2rem 0;
-    text-align: center;
     width: 100%;
 }
 
+.ai-tools h2 {
+    text-align: left;
+    /* Align the text to the left */
+    padding-left: 1rem;
+    /* Add padding to the left */
+}
 .grid {
     display: grid;
     gap: 1rem;
