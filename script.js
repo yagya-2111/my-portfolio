@@ -13,24 +13,44 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form submission
 document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name = e.target.name.value.trim();
-    const email = e.target.email.value.trim();
-    const message = e.target.message.value.trim();
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const name = formData.get('name').trim();
+    const email = formData.get('email').trim();
+    const message = formData.get('message').trim();
 
     if (name === '' || email === '' || message === '') {
         alert('Please fill in all fields.');
         return;
     }
 
-    // Simulate form submission
-    console.log('Form submitted:', { name, email, message });
-    alert('Thank you for your message! We will get back to you shortly.');
-    e.target.submit(); // Submit the form using FormSubmit
-    e.target.reset();
+    // Send the form data using fetch
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            alert('Thank you for your message! We will get back to you shortly.');
+            form.reset();
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    alert(data["errors"].map(error => error["message"]).join(", "));
+                } else {
+                    alert('Oops! There was a problem submitting your form');
+                }
+            });
+        }
+    }).catch(error => {
+        alert('Oops! There was a problem submitting your form');
+    });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
