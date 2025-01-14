@@ -1,4 +1,5 @@
 
+
 // Smooth scrolling for navbar sections
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -77,4 +78,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
