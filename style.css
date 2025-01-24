@@ -238,6 +238,7 @@ nav ul li a:hover::after {
     /* Subtle shadow */
     transition: all 0.3s ease-in-out;
     /* Same transition as tiles */
+     font-family: "Poppins", serif;
 }
 
 /* Hover Effect (Similar to Tiles) */
