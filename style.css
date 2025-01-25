@@ -46,7 +46,7 @@ body {
 
 .skill-tile:hover {
     background-color: #273038;
-    box-shadow: 0 0 15px rgb(36, 80, 210);
+    box-shadow: 0 0 15px rgb(0, 221, 255);
     transform: translateY(-10px);
 }
 
@@ -480,7 +480,7 @@ footer .social-icon {
 
 .project:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.455);
+    box-shadow: 0 0 20px rgb(0, 221, 255);
 }
 
 .project::before {
@@ -574,7 +574,7 @@ footer .social-icon {
 
 .ai-tool:hover {
     background-color: #273038;
-    box-shadow: 0 0 15px rgb(36, 80, 210);
+    box-shadow: 0 0 15px rgb(0, 221, 255);
     transform: translateY(-10px);
 }
 
@@ -617,3 +617,52 @@ footer .social-icon {
         grid-template-columns: repeat(3, minmax(0, 0.3fr)) !important;
     }
 }
+.education-item {
+    width: 100%;
+    background-color: #1a202c;
+    color: #fff;
+    display: flex;
+   
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.education-item:hover {
+    background-color: #4090d6;
+    box-shadow: 0 0 15px rgb(24, 229, 233);
+    
+}
+
+
+
+.education-item img {
+    width: 64px;
+    height: 64px;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+    border-radius: 50%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+   
+    .education-item img {
+        margin-right: 10px;
+        margin-top: 10px;
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .education-item {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+
