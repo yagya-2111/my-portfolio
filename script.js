@@ -74,3 +74,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+  document.addEventListener("keydown", (event) => {
+    if (
+      event.ctrlKey && event.shiftKey && event.key === "I" || // Ctrl+Shift+I
+      event.ctrlKey && event.shiftKey && event.key === "J" || // Ctrl+Shift+J
+      event.ctrlKey && event.key === "U" || // Ctrl+U (View Source)
+      event.ctrlKey && event.shiftKey && event.key === "C" || // Ctrl+Shift+C
+      event.key === "F12" // F12 Key
+    ) {
+      event.preventDefault();
+    }
+  });
