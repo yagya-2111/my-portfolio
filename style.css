@@ -46,7 +46,7 @@ body {
 
 .skill-tile:hover {
     background-color: #273038;
-    box-shadow: 0 0 15px rgb(0, 221, 255);
+    box-shadow: 0 0 15px rgb(0, 238, 255);
     transform: translateY(-10px);
 }
 
@@ -238,7 +238,10 @@ nav ul li a:hover::after {
     /* Subtle shadow */
     transition: all 0.3s ease-in-out;
     /* Same transition as tiles */
-     font-family: "Poppins", serif;
+    font-family: "Poppins", serif;
+
+
+
 }
 
 /* Hover Effect (Similar to Tiles) */
@@ -284,6 +287,7 @@ nav ul li a:hover::after {
     margin-top: 1rem;
     margin-left: auto;
     margin-right: auto;
+
 }
 
 /* Decorative Floating Element */
@@ -373,6 +377,8 @@ nav ul li a:hover::after {
     flex-direction: column;
     gap: 1rem;
 }
+
+
 
 .contact form input,
 .contact form textarea {
@@ -480,7 +486,7 @@ footer .social-icon {
 
 .project:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 20px rgb(0, 221, 255);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.455);
 }
 
 .project::before {
@@ -542,11 +548,14 @@ footer .social-icon {
     padding-left: 1rem;
     /* Add padding to the left */
 }
+
 .grid {
     display: grid;
     gap: 1rem;
-    justify-content: center; /* Center the grid items */
-    justify-items: center; /* Center the content within the grid items */
+    justify-content: center;
+    /* Center the grid items */
+    justify-items: center;
+    /* Center the content within the grid items */
 }
 
 @media (min-width: 768px) {
@@ -569,7 +578,8 @@ footer .social-icon {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease-in-out;
-    flex-direction: column; /* Ensure the content inside is arranged in a column */
+    flex-direction: column;
+    /* Ensure the content inside is arranged in a column */
 }
 
 .ai-tool:hover {
@@ -595,20 +605,25 @@ footer .social-icon {
 }
 
 .iconss {
-    max-width: 50px; /* Reduce the size of the logos */
+    max-width: 50px;
+    /* Reduce the size of the logos */
     margin-bottom: 0.5rem;
 }
 
 .ai-tool h3 {
-    font-size: 1rem; /* Make the text smaller */
+    font-size: 1rem;
+    /* Make the text smaller */
     color: #00bfff;
 }
 
 @media (max-width: 768px) {
     .ai-tool {
-        width: calc(100% - 60px); /* Reduce width to allow space for margins */
-        margin-left: 10px; /* Add margin to the left */
-        margin-right: 10px; /* Add margin to the right */
+        width: calc(100% - 60px);
+        /* Reduce width to allow space for margins */
+        margin-left: 10px;
+        /* Add margin to the left */
+        margin-right: 10px;
+        /* Add margin to the right */
     }
 }
 
@@ -617,58 +632,104 @@ footer .social-icon {
         grid-template-columns: repeat(3, minmax(0, 0.3fr)) !important;
     }
 }
-.education-item {
+
+.ai-tools {
+    padding: 2rem 0;
     width: 100%;
-    background-color: #1a202c;
-    color: #fff;
-    display: flex;
-   
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
 }
 
-.education-item:hover {
-    background-color: #4090d6;
-    box-shadow: 0 0 15px rgb(24, 229, 233);
-    
+.ai-tools h2 {
+    text-align: left;
+    /* Align the text to the left */
+    padding-left: 1rem;
+    /* Add padding to the left */
 }
 
+.grid {
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    /* Center the grid items */
+    justify-items: center;
+    /* Center the content within the grid items */
+}
 
+@media (min-width: 768px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
-.education-item img {
-    width: 64px;
-    height: 64px;
-    margin-right: 1rem;
-    transition: transform 0.3s ease;
+.skill-icon {
+    text-align: center;
+    margin: 15px;
+    /* Add margin to prevent overlap */
+}
+
+.skill-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #fff;
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image covers the container without distortion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 10px;
+    /* Add margin to create space between circles */
 }
 
-/* Responsive Adjustments */
+.skill-circle img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 50%;
+}
+
+/* Flexbox container for skill icons */
+.skill1 {
+    display: flex;
+    flex-wrap: wrap;
+    /* Ensure items wrap to the next line */
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 20px;
+    /* Add gap between skill icons */
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
-   
-    .education-item img {
-        margin-right: 10px;
-        margin-top: 10px;
-        margin-bottom: 1rem;
+    .skill-circle {
+        width: 80px;
+        /* Adjust size for smaller screens */
+        height: 80px;
+        /* Adjust size for smaller screens */
+    }
+
+    .skill-circle img {
+        max-width: 70%;
+        max-height: 70%;
     }
 }
 
-@media (min-width: 769px) {
-    .education-item {
-        flex-direction: row;
-        text-align: left;
+@media (max-width: 480px) {
+    .skill-circle {
+        width: 60px;
+        /* Further adjust size for smaller screens */
+        height: 60px;
+        /* Further adjust size for smaller screens */
+    }
+
+    .skill-circle img {
+        max-width: 80%;
+        max-height: 8 0%;
     }
 }
+
 .button {
     --main-focus: #2d8cf0;
     --font-color: #dedede;
-    --bg-color-sub: #222;
+    --bg-color-sub:  #222;
     --bg-color: #323232;
     --main-color: #dedede;
     position: relative;
