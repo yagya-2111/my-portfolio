@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-
 <head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Martel+Sans:wght@600&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yagya | Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Sans:wght@400;600&display=swap"
@@ -18,12 +18,13 @@
         integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMVuJ8F5T1ylPms4xdEjwMZ3wT81GA2+4m4zAK" crossorigin="anonymous">
 
     <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body>
     <header class="px-6">
         <div class="logo flex items-center">
-            <img src="assets/logo.jpg" alt="Logo" class="w-10 h-10 rounded-full">
+            <img src="assets/favicon.jpg" alt="Logo" class="w-10 h-10 rounded-full">
             <h1 class="text-2xl font-bold ml-4">Yagya Tripathi</h1>
         </div>
         <div class="social-links flex items-center">
@@ -44,7 +45,9 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#resume">Resume</a></li>
             </ul>
+
         </nav>
+
     </header>
 
     <div class="container mx-auto px-6">
@@ -53,7 +56,11 @@
             <h3 class="text-xl">Full Stack Web Developer</h3>
 
         </section>
-        <section id="projects" class="projects">
+
+
+
+
+        <section id="projects" class="projects hidden">
             <h2 class="text-2xl font-bold mb-6">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                 <div class="project">
@@ -94,69 +101,111 @@
             </div>
         </section>
     </div>
-
     <section id="skills" class="skills">
         <h2 class="text-2xl font-bold mb-6">Skills</h2>
         <div class="flex flex-wrap justify-center">
-            <div class="skill-icon">
-                <img src="assets/html.png" alt="HTML">
-                <div class="tooltip">HTML</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/css.png" alt="CSS">
-                <div class="tooltip">CSS</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/js.png" alt="JavaScript">
-                <div class="tooltip">JavaScript</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/react.png" alt="React">
-                <div class="tooltip">React</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/tailwind.png" alt="Tailwind CSS">
-                <div class="tooltip">Tailwind CSS</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/mongodb.png" alt="MongoDB">
-                <div class="tooltip">MongoDB</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/sql.png" alt="SQL">
-                <div class="tooltip">SQL</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/nosql.png" alt="NoSQL">
-                <div class="tooltip">NoSQL</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/expressjs.webp" alt="Express.js">
-                <div class="tooltip">Express.js</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/nodejs.png" alt="Node.js">
-                <div class="tooltip">Node.js</div>
-            </div>
-            <div class="skill-icon">
-                <img src="assets/figma.png" alt="HTML">
-                <div class="tooltip">Figma</div>
-            </div>
-
-            <div class="new-skills flex flex-wrap justify-center mt-6">
-                <div class="skill-tile">
-                    <h3>Responsive Design</h3>
+            <div class="skill1">
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/html.png" alt="HTML">
+                    </div>
+                    <div class="tooltip">HTML</div>
                 </div>
-                <div class="skill-tile">
-                    <h3>UI/UX</h3>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/css.png" alt="CSS">
+                    </div>
+                    <div class="tooltip">CSS</div>
                 </div>
-                <div class="skill-tile">
-                    <h3>Git/GitHub</h3>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/js.png" alt="JavaScript">
+                    </div>
+                    <div class="tooltip">JavaScript</div>
                 </div>
-
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/react.png" alt="React">
+                    </div>
+                    <div class="tooltip">React</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/tailwind.png" alt="Tailwind CSS">
+                    </div>
+                    <div class="tooltip">Tailwind CSS</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/mongodb.png" alt="MongoDB">
+                    </div>
+                    <div class="tooltip">MongoDB</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/sql.png" alt="SQL">
+                    </div>
+                    <div class="tooltip">SQL</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/nosql.png" alt="NoSQL">
+                    </div>
+                    <div class="tooltip">NoSQL</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/expressjs.webp" alt="Express.js">
+                    </div>
+                    <div class="tooltip">Express.js</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/nodejs.png" alt="Node.js">
+                    </div>
+                    <div class="tooltip">Node.js</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/figma.png" alt="Figma">
+                    </div>
+                    <div class="tooltip">Figma</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/pngwing.com.png" alt="Django">
+                    </div>
+                    <div class="tooltip">Django</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/reduc.png" alt="Redux">
+                    </div>
+                    <div class="tooltip">Redux</div>
+                </div>
+                <div class="skill-icon">
+                    <div class="skill-circle">
+                        <img src="assets/nextjs-icon.png" alt="Next.js">
+                    </div>
+                    <div class="tooltip">Next.js</div>
+                </div>
             </div>
         </div>
     </section>
+
+
+    <div class="new-skills flex flex-wrap justify-center mt-6">
+        <div class="skill-tile">
+            <h3>Responsive Design</h3>
+        </div>
+        <div class="skill-tile">
+            <h3>UI/UX</h3>
+        </div>
+        <div class="skill-tile">
+            <h3>Git/GitHub</h3>
+        </div>
+    </div>
+
 
     <section id="ai-tools" class="ai-tools my-12">
         <h2 class="text-2xl font-bold mb-6">AI Tools </h2>
@@ -191,11 +240,24 @@
     </section>
 
 
-
     <section id="resume" class="resume">
         <h2 class="text-2xl font-bold mb-6">Resume</h2>
-        <p>Link to my resume </p>
+        <p>
+            <a href="assets/YagyaTripathi_Resume.pdf" download="YagyaTripathi_Resume.pdf" class="resume-link button" id="download-link">
+                <span class="button__text">Download</span>
+                <span class="button__icon">
+                    <svg class="svg" data-name="Layer 2" id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+                        <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+                        <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+                    </svg>
+                </span>
+            </a>
+        </p>
     </section>
+    
+
+
     </div>
 
     <script src="script.js"></script>
@@ -213,6 +275,8 @@
             <img src="assets/instagram.png" alt="Instagram" class="social-icon">
         </a>
     </footer>
+
+
 </body>
 
 </html>

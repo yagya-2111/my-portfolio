@@ -9,11 +9,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
-document.querySelectorAll('.ai-tool').forEach(tool => {
-    tool.addEventListener('click', () => {
-        alert('You clicked on ' + tool.querySelector('h3').innerText);
-    });
-});
+
 
 
 document.getElementById('contactForm').addEventListener('submit', function (e) {
@@ -78,3 +74,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
