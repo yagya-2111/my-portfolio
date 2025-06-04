@@ -271,6 +271,39 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        // Disable right-click
+        document.addEventListener('contextmenu', (e) => e.preventDefault());
+
+        // Disable developer tools shortcuts
+        document.addEventListener('keydown', function(e) {
+            // Disable F12
+            if(e.keyCode == 123) {
+                e.preventDefault();
+            }
+            // Disable Ctrl+Shift+I (Windows/Linux) or Cmd+Option+I (Mac)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+                e.preventDefault();
+            }
+            // Disable Ctrl+Shift+J (Windows/Linux) or Cmd+Option+J (Mac)
+            if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+                e.preventDefault();
+            }
+            // Disable Ctrl+U (View Source)
+            if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+                e.preventDefault();
+            }
+            // Disable Ctrl+S (Save Page)
+            if(e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+                e.preventDefault();
+            }
+        });
+
+        // Disable DevTools detection
+        setInterval(function() {
+            debugger;
+        }, 100);
+    </script>
     <footer>
         <a href="https://www.linkedin.com/in/yagya-tripathi-782aa9332" target="_blank">
             <img src="assets/linkedin.png" alt="LinkedIn" class="social-icon">
